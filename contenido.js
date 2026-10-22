@@ -3,7 +3,7 @@ window.SITE = {
   "v": 3,
   "name": "Emilio Monzón",
   "brand": {
-    "es": "Portafolio",
+    "es": "Portafolio Personal ",
     "en": "Portfolio"
   },
   "role": {
@@ -11,11 +11,11 @@ window.SITE = {
     "en": "Back-End Developer"
   },
   "hello": {
-    "es": "¡Hola!\nMi nombre es Emilio",
+    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y GitHub Pages.",
     "en": "Hi!\nMy name is Emilio"
   },
   "about": {
-    "es": "Amante de la Tegnologia",
+    "es": "",
     "en": "I’m from Estelí and I love technology. I’m a charismatic, enthusiastic person, passionate about building and contributing to the community that creates tools to make everyday life easier."
   },
   "footer": {
