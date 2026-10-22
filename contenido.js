@@ -7,7 +7,7 @@ window.SITE = {
     "en": "Portfolio"
   },
   "role": {
-    "es": "Back-End Developer",
+    "es": "Lic. Informatica",
     "en": "Back-End Developer"
   },
   "hello": {
@@ -15,11 +15,11 @@ window.SITE = {
     "en": "Hi!\nMy name is Emilio"
   },
   "about": {
-    "es": "Soy esteliano y amante de la tecnología, soy una persona carismática y entusiasta. Apasionado por crear y contribuir a la comunidad de desarrollo de herramientas que nos facilitan cómo llevamos nuestro día a día.",
+    "es": "Amante de la Tegnologia ",
     "en": "I’m from Estelí and I love technology. I’m a charismatic, enthusiastic person, passionate about building and contributing to the community that creates tools to make everyday life easier."
   },
   "footer": {
-    "es": "© Emilio Monzón",
+    "es": "©SlevenLio27",
     "en": "© Emilio Monzón"
   },
   "share": {
@@ -27,7 +27,7 @@ window.SITE = {
     "en": "Portfolio of Emilio Monzón, back-end developer: projects, skills and experience."
   },
   "photos": {
-    "profile": "",
+    "profile": "img/subidas/whatsapp-image-2026-10-21-at-11-47-27-pm-1792648119784.jpg",
     "about": ""
   },
   "socials": [
@@ -37,7 +37,7 @@ window.SITE = {
     },
     {
       "type": "github",
-      "url": ""
+      "url": "https://github.com/slevenlio27"
     },
     {
       "type": "instagram",
@@ -45,11 +45,11 @@ window.SITE = {
     }
   ],
   "contact": {
-    "email": "",
+    "email": "slevenlio27@gmail.com",
     "cv": "",
     "cvName": "",
     "text": {
-      "es": "¿Tienes un proyecto o una vacante? Escríbeme y conversemos.",
+      "es": "¿Tienes un proyecto que deseas realizar? Escríbeme y conversemos.",
       "en": "Have a project or an opening? Write to me and let’s talk."
     }
   },
@@ -65,7 +65,7 @@ window.SITE = {
       },
       "stack": "FastAPI, React, Vite, Supabase, Gemini",
       "image": "",
-      "demo": "",
+      "demo": "https://mi-agente-didactico-production.up.railway.app",
       "repo": ""
     },
     {
@@ -74,24 +74,10 @@ window.SITE = {
         "en": "Nutrisev"
       },
       "desc": {
-        "es": "Tienda de suplementos con carrito, agenda de citas nutricionales y panel de administración, además de una versión landing.",
+        "es": "Tienda de suplementos con carrito, agenda de citas nutricionales ",
         "en": "Supplement store with a cart, nutrition appointment booking and an admin panel, plus a landing-page version."
       },
-      "stack": "React, Vite, FastAPI",
-      "image": "",
-      "demo": "",
-      "repo": ""
-    },
-    {
-      "title": {
-        "es": "App de finanzas personales",
-        "en": "Personal finance app"
-      },
-      "desc": {
-        "es": "App móvil para Android que funciona sin conexión y se sincroniza con su propia API.",
-        "en": "Offline-first Android app that syncs with its own API."
-      },
-      "stack": "Flutter, FastAPI, PostgreSQL, Firebase Auth",
+      "stack": "React, Vite",
       "image": "",
       "demo": "",
       "repo": ""
@@ -109,8 +95,8 @@ window.SITE = {
             "es": "Python",
             "en": ""
           },
-          "lvl": 4,
-          "years": "",
+          "lvl": 3,
+          "years": "2",
           "note": {
             "es": "",
             "en": ""
@@ -121,8 +107,8 @@ window.SITE = {
             "es": "FastAPI",
             "en": ""
           },
-          "lvl": 4,
-          "years": "",
+          "lvl": 3,
+          "years": "1",
           "note": {
             "es": "",
             "en": ""
@@ -133,7 +119,7 @@ window.SITE = {
             "es": "MySQL",
             "en": ""
           },
-          "lvl": 3,
+          "lvl": 2,
           "years": "",
           "note": {
             "es": "",
@@ -145,7 +131,7 @@ window.SITE = {
             "es": "PostgreSQL",
             "en": ""
           },
-          "lvl": 3,
+          "lvl": 2,
           "years": "",
           "note": {
             "es": "",
@@ -169,7 +155,7 @@ window.SITE = {
             "es": "Flutter",
             "en": ""
           },
-          "lvl": 2,
+          "lvl": 1,
           "years": "",
           "note": {
             "es": "",
@@ -201,7 +187,7 @@ window.SITE = {
             "es": "Linux",
             "en": ""
           },
-          "lvl": 4,
+          "lvl": 3,
           "years": "",
           "note": {
             "es": "",
@@ -225,19 +211,7 @@ window.SITE = {
             "es": "Supabase",
             "en": ""
           },
-          "lvl": 3,
-          "years": "",
-          "note": {
-            "es": "",
-            "en": ""
-          }
-        },
-        {
-          "n": {
-            "es": "CapCut",
-            "en": ""
-          },
-          "lvl": 3,
+          "lvl": 2,
           "years": "",
           "note": {
             "es": "",
@@ -318,11 +292,11 @@ window.SITE = {
   "experience": [
     {
       "period": {
-        "es": "Jun 2023 – actualidad",
+        "es": "Jun 2023 – Abr 2025",
         "en": "Jun 2023 – present"
       },
       "role": {
-        "es": "Videojuegos educativos y contenido audiovisual",
+        "es": "Videojuegos educativos, Diseño Web",
         "en": "Educational games & video content"
       },
       "place": {
@@ -330,26 +304,8 @@ window.SITE = {
         "en": ""
       },
       "desc": {
-        "es": "Creación de videojuegos educativos para impartir materias en primaria y edición de contenido audiovisual.",
+        "es": "Creación de videojuegos educativos para impartir , Diseño y Desarrollo de aplicaciones Web",
         "en": "Building educational games for primary-school subjects and editing video content."
-      }
-    },
-    {
-      "period": {
-        "es": "Mar 2023 – actualidad",
-        "en": "Mar 2023 – present"
-      },
-      "role": {
-        "es": "Técnico de lectura y reparto",
-        "en": "Meter reading & delivery technician"
-      },
-      "place": {
-        "es": "DN-DS, Estelí",
-        "en": "DN-DS, Estelí"
-      },
-      "desc": {
-        "es": "",
-        "en": ""
       }
     },
     {
@@ -372,25 +328,7 @@ window.SITE = {
     },
     {
       "period": {
-        "es": "2021 – actualidad",
-        "en": "2021 – present"
-      },
-      "role": {
-        "es": "Desarrollador freelance",
-        "en": "Freelance developer"
-      },
-      "place": {
-        "es": "",
-        "en": ""
-      },
-      "desc": {
-        "es": "Desarrollo y manejo de infraestructura de datos.",
-        "en": "Development and management of data infrastructure."
-      }
-    },
-    {
-      "period": {
-        "es": "",
+        "es": "Sept 2024",
         "en": ""
       },
       "role": {
@@ -471,7 +409,7 @@ window.SITE = {
       "bg": "#ffffff",
       "panel": "#333333",
       "ink": "#333333",
-      "soft": "#bababa",
+      "soft": "#ddc5c5",
       "on": "#ffffff"
     },
     "sobre": {
