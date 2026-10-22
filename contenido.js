@@ -33,7 +33,7 @@ window.SITE = {
   "socials": [
     {
       "type": "whatsapp",
-      "url": ""
+      "url": "https://wa.me/qr/GJ3G72BQ5CRYD1?s=v"
     },
     {
       "type": "github",
@@ -213,6 +213,18 @@ window.SITE = {
           },
           "lvl": 2,
           "years": "",
+          "note": {
+            "es": "",
+            "en": ""
+          }
+        },
+        {
+          "n": {
+            "es": "Excel",
+            "en": ""
+          },
+          "lvl": 3,
+          "years": "3",
           "note": {
             "es": "",
             "en": ""
