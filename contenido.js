@@ -15,7 +15,7 @@ window.SITE = {
     "en": "Hi!\nMy name is Emilio"
   },
   "about": {
-    "es": "Amante de la Tegnologia ",
+    "es": "Amante de la Tegnologia",
     "en": "I’m from Estelí and I love technology. I’m a charismatic, enthusiastic person, passionate about building and contributing to the community that creates tools to make everyday life easier."
   },
   "footer": {
@@ -23,12 +23,12 @@ window.SITE = {
     "en": "© Emilio Monzón"
   },
   "share": {
-    "es": "Portafolio de Emilio Monzón, desarrollador back-end: proyectos, habilidades y experiencia.",
+    "es": "Portafolio de Emilio Monzón, desarrollador Web",
     "en": "Portfolio of Emilio Monzón, back-end developer: projects, skills and experience."
   },
   "photos": {
     "profile": "img/subidas/whatsapp-image-2026-10-21-at-11-47-27-pm-1792648119784.jpg",
-    "about": ""
+    "about": "img/subidas/whatsapp-image-2026-10-21-at-11-59-20-pm-1792648805656.jpg"
   },
   "socials": [
     {
@@ -40,8 +40,8 @@ window.SITE = {
       "url": "https://github.com/slevenlio27"
     },
     {
-      "type": "instagram",
-      "url": ""
+      "type": "email",
+      "url": "slevenlio27@gmail.com"
     }
   ],
   "contact": {
@@ -56,7 +56,7 @@ window.SITE = {
   "projects": [
     {
       "title": {
-        "es": "Mi Agente Didáctico",
+        "es": "Claustro",
         "en": "Mi Agente Didáctico"
       },
       "desc": {
@@ -64,7 +64,7 @@ window.SITE = {
         "en": "AI assistant for university teachers: each teacher connects their own Gemini account and conversations are logged. Includes an admin panel and runs live on Railway."
       },
       "stack": "FastAPI, React, Vite, Supabase, Gemini",
-      "image": "",
+      "image": "img/subidas/captura-desde-2026-10-22-00-03-19-1792649126157.jpg",
       "demo": "https://mi-agente-didactico-production.up.railway.app",
       "repo": ""
     },
