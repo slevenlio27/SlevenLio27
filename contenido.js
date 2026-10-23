@@ -11,7 +11,7 @@ window.SITE = {
     "en": "Back-End Developer"
   },
   "hello": {
-    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y GitHub Pages.",
+    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y Claude",
     "en": "Hi!\nMy name is Emilio"
   },
   "about": {
@@ -225,6 +225,18 @@ window.SITE = {
           },
           "lvl": 3,
           "years": "3",
+          "note": {
+            "es": "",
+            "en": ""
+          }
+        },
+        {
+          "n": {
+            "es": "Claude Code",
+            "en": ""
+          },
+          "lvl": 2,
+          "years": "1",
           "note": {
             "es": "",
             "en": ""
