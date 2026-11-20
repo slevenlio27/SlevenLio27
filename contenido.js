@@ -92,7 +92,7 @@ window.SITE = {
         "en": ""
       },
       "stack": "React, Vite ",
-      "image": "",
+      "image": "img/subidas/506062-1795162255724.jpg",
       "demo": "https://facristh.com/",
       "repo": ""
     }
