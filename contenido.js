@@ -74,7 +74,7 @@ window.SITE = {
         "en": "Nutrisev"
       },
       "desc": {
-        "es": "Tienda de suplementos con carrito, agenda de citas nutricionales ",
+        "es": "Tienda de suplemento agenda de citas nutricionales y psicológicas ",
         "en": "Supplement store with a cart, nutrition appointment booking and an admin panel, plus a landing-page version."
       },
       "stack": "React, Vite",
