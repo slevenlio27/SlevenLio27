@@ -381,6 +381,24 @@ window.SITE = {
         "es": "Creación de aplicaciones de escritorio para la operación del negocio.",
         "en": "Desktop applications for day-to-day business operations."
       }
+    },
+    {
+      "period": {
+        "es": "Enero 2024 a Noviembre 2026",
+        "en": ""
+      },
+      "role": {
+        "es": "Agente de Lectura y Reparto ",
+        "en": ""
+      },
+      "place": {
+        "es": "Coelnicsa ",
+        "en": ""
+      },
+      "desc": {
+        "es": "",
+        "en": ""
+      }
     }
   ],
   "sections": {
