@@ -23,7 +23,7 @@ window.SITE = {
     "en": "© Emilio Monzón"
   },
   "share": {
-    "es": "Portafolio de Emilio Monzón, desarrollador Web",
+    "es": "Portafolio de Emilio Monzón, desarrollador Web ",
     "en": "Portfolio of Emilio Monzón, back-end developer: projects, skills and experience."
   },
   "photos": {
@@ -427,7 +427,7 @@ window.SITE = {
       "yearOne": "año",
       "yearMany": "años",
       "demo": "Ver Sitio",
-      "repo": "Ver Codigo",
+      "repo": "",
       "mail": "Escribir correo",
       "copy": "Copiar correo",
       "copied": "Copiado",
