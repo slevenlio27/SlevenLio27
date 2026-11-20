@@ -78,8 +78,8 @@ window.SITE = {
         "en": "Supplement store with a cart, nutrition appointment booking and an admin panel, plus a landing-page version."
       },
       "stack": "React, Vite",
-      "image": "",
-      "demo": "",
+      "image": "img/subidas/506060-1795162133405.jpg",
+      "demo": "https://www.nutrisevm.com/",
       "repo": ""
     },
     {
