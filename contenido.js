@@ -7,8 +7,8 @@ window.SITE = {
     "en": "Portfolio"
   },
   "role": {
-    "es": "Lic. Informatica",
-    "en": "Back-End Developer"
+    "es": "Desarrollador full stack",
+    "en": "Full-stack developer"
   },
   "hello": {
     "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y Claude",
