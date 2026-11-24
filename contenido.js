@@ -33,7 +33,7 @@ window.SITE = {
   "socials": [
     {
       "type": "whatsapp",
-      "url": "https://wa.me/qr/GJ3G72BQ5CRYD1?s=v"
+      "url": "https://wa.me/50586036776?text=Hola%20Emilio%2C%20vi%20tu%20portafolio%20y%20quiero%20hablar%20sobre%20un%20proyecto."
     },
     {
       "type": "github",
