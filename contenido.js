@@ -11,20 +11,20 @@ window.SITE = {
     "en": "Full-stack developer"
   },
   "hello": {
-    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y Claude",
-    "en": "Hi!\nMy name is Emilio"
+    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y GitHub Pages.",
+    "en": "I'm a full-stack developer who builds complete web and mobile apps: from the interface design to the database and the production launch.\nI work with React and Vite on the frontend, FastAPI, PostgreSQL and Supabase on the backend, and Flutter for Android apps. I handle user sign-in, admin panels, file storage and deployment on platforms like Railway and GitHub Pages."
   },
   "about": {
-    "es": "",
+    "es": "Soy de Estelí y me apasiona la tecnología. Soy una persona carismática y entusiasta, con ganas de construir y de aportar a la comunidad que crea herramientas para hacer más fácil el día a día.",
     "en": "I’m from Estelí and I love technology. I’m a charismatic, enthusiastic person, passionate about building and contributing to the community that creates tools to make everyday life easier."
   },
   "footer": {
-    "es": "©SlevenLio27",
+    "es": "© Emilio Monzón",
     "en": "© Emilio Monzón"
   },
   "share": {
-    "es": "Portafolio de Emilio Monzón, desarrollador Web ",
-    "en": "Portfolio of Emilio Monzón, back-end developer: projects, skills and experience."
+    "es": "Emilio Monzón, desarrollador full stack: sitios web, sistemas y apps Android para negocios en Nicaragua.",
+    "en": "Emilio Monzón, full-stack developer: websites, systems and Android apps for businesses in Nicaragua."
   },
   "photos": {
     "profile": "img/subidas/whatsapp-image-2026-10-21-at-11-47-27-pm-1792648119784.jpg",
@@ -50,14 +50,14 @@ window.SITE = {
     "cvName": "",
     "text": {
       "es": "¿Tienes un proyecto que deseas realizar? Escríbeme y conversemos.",
-      "en": "Have a project or an opening? Write to me and let’s talk."
+      "en": "Have a project in mind? Write to me and let's talk."
     }
   },
   "projects": [
     {
       "title": {
         "es": "Claustro",
-        "en": "Mi Agente Didáctico"
+        "en": "Claustro"
       },
       "desc": {
         "es": "Asistente de IA para docentes universitarios: cada docente conecta su propia cuenta de Gemini y las conversaciones quedan registradas. Incluye panel de administración y está en línea en Railway.",
@@ -74,8 +74,8 @@ window.SITE = {
         "en": "Nutrisev"
       },
       "desc": {
-        "es": "Tienda de suplemento agenda de citas nutricionales y psicológicas ",
-        "en": "Supplement store with a cart, nutrition appointment booking and an admin panel, plus a landing-page version."
+        "es": "Tienda de suplementos con carrito de compras y agenda de citas de nutrición y psicología deportiva.",
+        "en": "Supplement store with a shopping cart and booking for nutrition and sports psychology appointments."
       },
       "stack": "React, Vite",
       "image": "img/subidas/506060-1795162133405.jpg",
@@ -84,14 +84,14 @@ window.SITE = {
     },
     {
       "title": {
-        "es": "Facristh ",
-        "en": ""
+        "es": "Facristh",
+        "en": "Facristh"
       },
       "desc": {
-        "es": "Página web creada para un negocio de venta de maderas al por mayor y al detalle en Managua ",
-        "en": ""
+        "es": "Página web para un negocio de Managua que vende madera al por mayor y al detalle.",
+        "en": "Website for a Managua business that sells lumber wholesale and retail."
       },
-      "stack": "React, Vite ",
+      "stack": "React, Vite",
       "image": "img/subidas/506062-1795162255724.jpg",
       "demo": "https://facristh.com/",
       "repo": ""
@@ -330,44 +330,26 @@ window.SITE = {
   "experience": [
     {
       "period": {
-        "es": "Jun 2023 – Abr 2025",
-        "en": "Jun 2023 – present"
+        "es": "Ene 2024 – Nov 2026",
+        "en": "Jan 2024 – Nov 2026"
       },
       "role": {
-        "es": "Videojuegos educativos, Diseño Web",
-        "en": "Educational games & video content"
+        "es": "Agente de lectura y reparto",
+        "en": "Meter reading and delivery agent"
       },
       "place": {
-        "es": "",
-        "en": ""
+        "es": "Coelnicsa",
+        "en": "Coelnicsa"
       },
       "desc": {
-        "es": "Creación de videojuegos educativos para impartir , Diseño y Desarrollo de aplicaciones Web",
-        "en": "Building educational games for primary-school subjects and editing video content."
-      }
-    },
-    {
-      "period": {
-        "es": "2022",
-        "en": ""
-      },
-      "role": {
-        "es": "Hackathon Nicaragua 2022",
-        "en": "Hackathon Nicaragua 2022"
-      },
-      "place": {
-        "es": "",
-        "en": ""
-      },
-      "desc": {
-        "es": "Proyecto de academia en línea para brindar educación de calidad y manejo de herramientas tecnológicas.",
-        "en": "Online academy project to offer quality education and hands-on training in technology tools."
+        "es": "Respaldo al personal operativo desde oficina: cierres de datos, conteo de documentos y análisis mensual de eficiencia.",
+        "en": "Office support for field staff: data closings, document counts and monthly efficiency analysis."
       }
     },
     {
       "period": {
         "es": "Sept 2024",
-        "en": ""
+        "en": "Sept 2024"
       },
       "role": {
         "es": "Aplicaciones de escritorio",
@@ -384,20 +366,38 @@ window.SITE = {
     },
     {
       "period": {
-        "es": "Enero 2024 a Noviembre 2026",
-        "en": ""
+        "es": "Jun 2023 – Abr 2025",
+        "en": "Jun 2023 – Apr 2025"
       },
       "role": {
-        "es": "Agente de Lectura y Reparto ",
-        "en": ""
+        "es": "Videojuegos educativos y diseño web",
+        "en": "Educational games and web design"
       },
       "place": {
-        "es": "Coelnicsa ",
+        "es": "",
         "en": ""
       },
       "desc": {
+        "es": "Creación de videojuegos educativos para asignaturas de primaria, y diseño y desarrollo de aplicaciones web.",
+        "en": "Built educational games for primary-school subjects, and designed and developed web applications."
+      }
+    },
+    {
+      "period": {
+        "es": "2022",
+        "en": "2022"
+      },
+      "role": {
+        "es": "Hackathon Nicaragua 2022",
+        "en": "Hackathon Nicaragua 2022"
+      },
+      "place": {
         "es": "",
         "en": ""
+      },
+      "desc": {
+        "es": "Proyecto de academia en línea para brindar educación de calidad y manejo de herramientas tecnológicas.",
+        "en": "Online academy project to offer quality education and hands-on training in technology tools."
       }
     }
   ],
@@ -426,8 +426,8 @@ window.SITE = {
       ],
       "yearOne": "año",
       "yearMany": "años",
-      "demo": "Ver Sitio",
-      "repo": "",
+      "demo": "Visitar sitio",
+      "repo": "Ver código",
       "mail": "Escribir correo",
       "copy": "Copiar correo",
       "copied": "Copiado",
@@ -451,8 +451,8 @@ window.SITE = {
       ],
       "yearOne": "year",
       "yearMany": "years",
-      "demo": "Live demo",
-      "repo": "Code",
+      "demo": "Visit site",
+      "repo": "View code",
       "mail": "Send email",
       "copy": "Copy email",
       "copied": "Copied",
