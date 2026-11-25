@@ -407,6 +407,24 @@ window.SITE = {
         "es": "Proyecto de academia en línea para brindar educación de calidad y manejo de herramientas tecnológicas.",
         "en": "Online academy project to offer quality education and hands-on training in technology tools."
       }
+    },
+    {
+      "period": {
+        "es": "Nov 2026",
+        "en": ""
+      },
+      "role": {
+        "es": "Desarrollador",
+        "en": ""
+      },
+      "place": {
+        "es": "Home Office",
+        "en": ""
+      },
+      "desc": {
+        "es": "Desarrollando sitios webs y apps móviles para nuevos clientes  ",
+        "en": ""
+      }
     }
   ],
   "sections": {
