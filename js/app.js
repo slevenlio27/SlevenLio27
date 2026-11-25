@@ -3,7 +3,7 @@
    indica cuál es con <body data-page="...">. */
 (() => {
   "use strict";
-  const PAGES = { inicio: "index.html", sobre: "sobre-mi.html", proyectos: "proyectos.html", habilidades: "habilidades.html", experiencia: "experiencia.html", contacto: "contacto.html" };
+  const PAGES = { inicio: "/", sobre: "/sobre-mi", proyectos: "/proyectos", habilidades: "/habilidades", experiencia: "/experiencia", contacto: "/contacto" };
   const ORDER = ["inicio", "sobre", "proyectos", "habilidades", "experiencia"];
   const page = (document.body.dataset.page in PAGES) ? document.body.dataset.page : "inicio";
 
