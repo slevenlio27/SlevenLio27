@@ -1,0 +1,26 @@
+# Portafolio de Emilio Monzón — https://www.slevenlio27.com
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+# Rastreadores de IA: bienvenidos a leer el sitio
+User-agent: GPTBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin.html
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.slevenlio27.com/sitemap.xml
