@@ -174,7 +174,7 @@
 
   /* ---------- piezas compartidas ---------- */
   const header = () => {
-    const u = ui(), dark = document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+    const u = ui(), dark = document.documentElement.dataset.theme !== "light";
     const tools = `<button class="icon-btn" type="button" data-lang aria-label="${esc(u.langSwitch)}"><span class="lang-code">${lang === "es" ? "EN" : "ES"}</span></button>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="${esc(dark ? u.themeLight : u.themeDark)}">${dark ? ICONS.sun : ICONS.moon}</button>`;
     const links = ORDER.filter(on).map(k => `<li><a href="${PAGES[k]}"${k === page ? ' aria-current="page"' : ""}>${esc(u.nav[k])}</a></li>`).join("");
@@ -199,7 +199,7 @@
   };
   const pageHead = (title, lead) => `<header class="page-head wrap"><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</header>`;
   const ctaBand = () => {
-    if (page === "contacto") return "";
+    if (page === "contacto" || page === "inicio") return "";
     const u = ui();
     return `<section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-inner">
       <h2 id="cta-title">${esc(u.ctaTitle)}</h2>
@@ -240,12 +240,6 @@
   <h2 id="svc-title" class="block-title">${esc(u.servicesTitle)}</h2>
   <ul class="services">${u.services.map(s => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`).join("")}</ul>
 </section>
-${on("proyectos") && state.projects.length ? `<section class="block wrap" aria-labelledby="work-title">
-  <div class="block-head"><h2 id="work-title" class="block-title">${esc(u.workTitle)}</h2><a class="text-link" href="${PAGES.proyectos}">${esc(u.allWork)}</a></div>
-  <ul class="work-list">${state.projects.map(p => `<li>
-    <a href="${PAGES.proyectos}#${slug(p)}"><h3>${esc(t(p.title))}</h3><p>${esc(t(p.desc))}</p>${ICONS.arrow}</a>
-  </li>`).join("")}</ul>
-</section>` : ""}
 <section class="block wrap" aria-labelledby="proc-title">
   <h2 id="proc-title" class="block-title">${esc(u.processTitle)}</h2>
   <ol class="process">${u.process.map(s => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`).join("")}</ol>
@@ -360,7 +354,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
     }));
     head.querySelectorAll("[data-theme-toggle]").forEach(b => b.addEventListener("click", () => {
       const root = document.documentElement;
-      const isDark = root.dataset.theme === "dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+      const isDark = root.dataset.theme !== "light";
       root.dataset.theme = isDark ? "light" : "dark";
       try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
       render();
@@ -389,7 +383,6 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
   }
   const onScroll = () => { const h = document.getElementById("header"); if (h) h.classList.toggle("scrolled", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (!document.documentElement.dataset.theme) render(); });
 
   /* Mide la proporción de las capturas para elegir marco de teléfono o de navegador. */
   const measure = () => Promise.all(state.projects.map(p => src(p.image)).filter(Boolean).map(url => new Promise(res => {
