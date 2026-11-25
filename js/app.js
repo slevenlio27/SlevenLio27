@@ -327,9 +327,12 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
     const u = ui();
     document.documentElement.lang = lang;
     const navName = page === "inicio" ? "" : u.nav[page];
-    document.title = [navName, state.name].filter(Boolean).join(" · ") || document.title;
-    const md = document.querySelector('meta[name="description"]');
-    if (md && t(state.share)) md.setAttribute("content", t(state.share));
+    // En español el título y la descripción ya vienen escritos en el HTML (SEO); solo se ajustan en inglés.
+    if (lang === "en") {
+      document.title = [navName, state.name].filter(Boolean).join(" · ") || document.title;
+      const md = document.querySelector('meta[name="description"]');
+      if (md && t(state.share)) md.setAttribute("content", t(state.share));
+    }
     const skip = document.querySelector(".skip");
     if (skip) skip.textContent = lang === "es" ? "Saltar al contenido" : "Skip to content";
     document.getElementById("root").innerHTML = `${header()}<main id="main" class="page page-${page}">${views[page]()}</main>${footer()}`;
