@@ -198,14 +198,6 @@
 </header>`;
   };
   const pageHead = (title, lead) => `<header class="page-head wrap"><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</header>`;
-  const ctaBand = () => {
-    if (page === "contacto" || page === "inicio") return "";
-    const u = ui();
-    return `<section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-inner">
-      <h2 id="cta-title">${esc(u.ctaTitle)}</h2>
-      <div class="cta-actions">${primaryCta()}</div>
-    </div></section>`;
-  };
   const socials = cls => state.socials.filter(s => socialUrl(s)).length ? `<ul class="socials ${cls || ""}">${state.socials.filter(s => socialUrl(s)).map(s => {
     const url = socialUrl(s), lbl = LABELS[s.type] || "Web";
     return `<li><a href="${esc(url)}" aria-label="${lbl}"${/^mailto:/i.test(url) ? "" : ' target="_blank" rel="noopener"'}>${ICONS[s.type] || ICONS.web}</a></li>`;
@@ -340,7 +332,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
     if (md && t(state.share)) md.setAttribute("content", t(state.share));
     const skip = document.querySelector(".skip");
     if (skip) skip.textContent = lang === "es" ? "Saltar al contenido" : "Skip to content";
-    document.getElementById("root").innerHTML = `${header()}<main id="main" class="page page-${page}">${views[page]()}</main>${ctaBand()}${footer()}`;
+    document.getElementById("root").innerHTML = `${header()}<main id="main" class="page page-${page}">${views[page]()}</main>${footer()}`;
     wire();
   }
 

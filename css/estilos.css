@@ -196,7 +196,7 @@ main { flex: 1; }
 /* pie: solo redes */
 .site-footer { border-top: 1px solid var(--line); }
 .cta-band + .site-footer { border-top: 0; }
-.page-inicio + .site-footer { margin-top: clamp(64px, 9vw, 120px); }
+main + .site-footer { margin-top: clamp(64px, 9vw, 120px); }
 .footer-row { display: flex; justify-content: center; padding-block: 28px; }
 .socials { display: flex; gap: 10px; }
 .socials a { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--ink); }
