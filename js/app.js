@@ -199,7 +199,7 @@
   };
   const pageHead = (title, lead) => `<header class="page-head wrap"><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</header>`;
   const ctaBand = () => {
-    if (page === "contacto") return "";
+    if (page === "contacto" || page === "inicio") return "";
     const u = ui();
     return `<section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-inner">
       <h2 id="cta-title">${esc(u.ctaTitle)}</h2>
@@ -240,12 +240,6 @@
   <h2 id="svc-title" class="block-title">${esc(u.servicesTitle)}</h2>
   <ul class="services">${u.services.map(s => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`).join("")}</ul>
 </section>
-${on("proyectos") && state.projects.length ? `<section class="block wrap" aria-labelledby="work-title">
-  <div class="block-head"><h2 id="work-title" class="block-title">${esc(u.workTitle)}</h2><a class="text-link" href="${PAGES.proyectos}">${esc(u.allWork)}</a></div>
-  <ul class="work-list">${state.projects.map(p => `<li>
-    <a href="${PAGES.proyectos}#${slug(p)}"><h3>${esc(t(p.title))}</h3><p>${esc(t(p.desc))}</p>${ICONS.arrow}</a>
-  </li>`).join("")}</ul>
-</section>` : ""}
 <section class="block wrap" aria-labelledby="proc-title">
   <h2 id="proc-title" class="block-title">${esc(u.processTitle)}</h2>
   <ol class="process">${u.process.map(s => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`).join("")}</ol>
