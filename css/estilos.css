@@ -146,11 +146,19 @@ main { flex: 1; }
 .collage .c-tall-1 { right: 0; bottom: 0; }
 .collage .c-tall-2 { right: 25%; bottom: 0; z-index: 2; }
 .collage:has(.c-tall-2) .c-tall-1 { bottom: 7%; }
-.collage:not(:has(.c-wide)) .c-tall-1 { left: 8%; right: auto; top: 0; bottom: auto; width: 40%; }
-.collage:not(:has(.c-wide)) .c-tall-2 { right: 6%; bottom: 0; width: 40%; }
+.collage.phones { aspect-ratio: 1 / .84; }
+.collage.phones .device { width: 33%; top: 9%; }
+.collage.phones .c-left { left: 2%; transform: rotate(-4deg); }
+.collage.phones .c-right { right: 2%; transform: rotate(4deg); }
+.collage.phones .c-mid { left: 31.5%; width: 37%; top: 0; z-index: 2; }
+.collage.phones .c-mid:only-child { left: 31.5%; }
 .ready .collage .device { animation: settle .9s cubic-bezier(.2, .8, .2, 1) both; }
 .ready .collage .c-tall-1 { animation-delay: .12s; }
 .ready .collage .c-tall-2 { animation-delay: .24s; }
+.ready .collage.phones .c-left { animation-name: settle-left; animation-delay: .12s; }
+.ready .collage.phones .c-right { animation-name: settle-right; animation-delay: .24s; }
+@keyframes settle-left { from { opacity: 0; transform: translateY(28px) rotate(-4deg); } to { opacity: 1; transform: rotate(-4deg); } }
+@keyframes settle-right { from { opacity: 0; transform: translateY(28px) rotate(4deg); } to { opacity: 1; transform: rotate(4deg); } }
 @keyframes settle { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
 
 /* marcos */

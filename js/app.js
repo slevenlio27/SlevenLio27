@@ -221,10 +221,11 @@
     inicio() {
       const u = ui(), shots = withImage();
       const wide = shots.find(p => !isPortrait(src(p.image))), tall = shots.filter(p => p !== wide).slice(0, 2);
-      const collage = shots.length ? `<div class="collage" aria-hidden="false">
-          ${wide ? shot(wide, { cls: "c-wide", eager: true }) : ""}
-          ${tall.map((p, i) => shot(p, { cls: "c-tall c-tall-" + (i + 1), eager: true })).join("")}
-        </div>` : "";
+      // Con todas las capturas en vertical se muestran hasta tres teléfonos; el primero proyecto va al centro.
+      const fan = ["c-mid", "c-left", "c-right"];
+      const collage = !shots.length ? "" : wide
+        ? `<div class="collage">${shot(wide, { cls: "c-wide", eager: true })}${tall.map((p, i) => shot(p, { cls: "c-tall c-tall-" + (i + 1), eager: true })).join("")}</div>`
+        : `<div class="collage phones">${shots.slice(0, 3).map((p, i) => shot(p, { cls: fan[i], eager: true })).join("")}</div>`;
       return `
 <section class="hero wrap">
   <div class="hero-copy">
