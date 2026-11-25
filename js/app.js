@@ -23,7 +23,7 @@
         demo: "Visitar sitio", repo: "Ver código", mail: "Escribir correo", copy: "Copiar correo", copied: "Correo copiado", cv: "Descargar CV",
         tapHint: "",
         heroTitle: "Construyo la web, el sistema o la app que tu negocio necesita.",
-        heroLead: "Desde la idea hasta que está en línea: diseño, programación, base de datos y publicación. Trabajo desde Estelí, Nicaragua.",
+        heroLead: "Me encargo de todo el proyecto, de la primera conversación a la publicación. Trabajo desde Estelí, Nicaragua.",
         wa: "Escríbeme por WhatsApp", seeWork: "Ver proyectos", live: "En línea",
         servicesTitle: "Qué puedo hacer por tu negocio",
         services: [
@@ -31,7 +31,7 @@
           { t: "Sistema con panel de administración", d: "Citas, inventario, usuarios o reportes en un sistema web que tú mismo administras desde el navegador." },
           { t: "App Android", d: "Una aplicación móvil con inicio de sesión y datos en la nube, conectada a tu sistema." }
         ],
-        workTitle: "Proyectos en línea", workLead: "Sitios reales que puedes abrir ahora mismo.", allWork: "Ver todos los proyectos",
+        workTitle: "Proyectos recientes", workLead: "", allWork: "Ver en detalle",
         processTitle: "Cómo trabajamos",
         process: [
           { t: "Conversamos", d: "Me cuentas qué necesitas y definimos juntos el alcance y el costo." },
@@ -40,7 +40,7 @@
           { t: "Publico", d: "Lo dejo en línea y te explico cómo usarlo y actualizarlo." }
         ],
         ctaTitle: "¿Tienes un proyecto en mente?", ctaBtn: "Hablemos de tu proyecto",
-        aboutTitle: "Sobre mí", aboutLead: "Desarrollador web y móvil en Estelí, Nicaragua.", traits: "Cómo trabajo", photoCaption: "Hackathon Nicaragua",
+        aboutTitle: "Sobre mí", aboutLead: "Desarrollador web y móvil en Estelí, Nicaragua.", traits: "Cualidades", photoCaption: "Hackathon Nicaragua",
         projectsTitle: "Proyectos", projectsLead: "Trabajos publicados y en uso. Abre cada uno para verlo funcionando.", built: "Tecnologías",
         skillsTitle: "Habilidades", skillsLead: "Las herramientas con las que construyo cada proyecto.",
         expTitle: "Experiencia", expLead: "Dónde he trabajado y qué he construido.",
@@ -55,7 +55,7 @@
         demo: "Visit site", repo: "View code", mail: "Send email", copy: "Copy email", copied: "Email copied", cv: "Download CV",
         tapHint: "",
         heroTitle: "I build the website, system or app your business needs.",
-        heroLead: "From the idea to going live: design, code, database and deployment. Based in Estelí, Nicaragua.",
+        heroLead: "I handle the whole project, from the first conversation to launch. Based in Estelí, Nicaragua.",
         wa: "Message me on WhatsApp", seeWork: "See projects", live: "Live",
         servicesTitle: "What I can build for your business",
         services: [
@@ -63,7 +63,7 @@
           { t: "System with an admin panel", d: "Appointments, inventory, users or reports in a web system you manage yourself from the browser." },
           { t: "Android app", d: "A mobile app with sign-in and cloud data, connected to your system." }
         ],
-        workTitle: "Live projects", workLead: "Real sites you can open right now.", allWork: "See all projects",
+        workTitle: "Recent projects", workLead: "", allWork: "See details",
         processTitle: "How we work",
         process: [
           { t: "We talk", d: "You tell me what you need and we agree on scope and cost." },
@@ -72,7 +72,7 @@
           { t: "Launch", d: "I put it online and show you how to use and update it." }
         ],
         ctaTitle: "Have a project in mind?", ctaBtn: "Let's talk about your project",
-        aboutTitle: "About me", aboutLead: "Web and mobile developer in Estelí, Nicaragua.", traits: "How I work", photoCaption: "Hackathon Nicaragua",
+        aboutTitle: "About me", aboutLead: "Web and mobile developer in Estelí, Nicaragua.", traits: "Strengths", photoCaption: "Hackathon Nicaragua",
         projectsTitle: "Projects", projectsLead: "Published work in real use. Open each one to see it running.", built: "Built with",
         skillsTitle: "Skills", skillsLead: "The tools I use to build each project.",
         expTitle: "Experience", expLead: "Where I've worked and what I've built.",
@@ -139,7 +139,8 @@
     menu: svg('<path d="M4 7h16M4 12h16M4 17h16"/>'),
     x2: svg('<path d="M6 6l12 12M18 6 6 18"/>'),
     pin: svg('<path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/>'),
-    check: svg('<path d="m5 12 4.5 4.5L19 7"/>')
+    check: svg('<path d="m5 12 4.5 4.5L19 7"/>'),
+    arrow: svg('<path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>')
   };
   const LABELS = { whatsapp: "WhatsApp", github: "GitHub", instagram: "Instagram", linkedin: "LinkedIn", facebook: "Facebook", x: "X", youtube: "YouTube", tiktok: "TikTok", web: "Web", email: "Email" };
   const socialUrl = s => {
@@ -199,10 +200,10 @@
   const pageHead = (title, lead) => `<header class="page-head wrap"><h1>${esc(title)}</h1>${lead ? `<p class="lead">${esc(lead)}</p>` : ""}</header>`;
   const ctaBand = () => {
     if (page === "contacto") return "";
-    const u = ui(), txt = t(state.contact.text);
+    const u = ui();
     return `<section class="cta-band" aria-labelledby="cta-title"><div class="wrap cta-inner">
-      <div><h2 id="cta-title">${esc(u.ctaTitle)}</h2>${txt ? `<p>${esc(txt)}</p>` : ""}</div>
-      <div class="cta-actions">${primaryCta()}<a class="btn btn-ghost-on-dark" href="${PAGES.contacto}">${esc(u.nav.contacto)}</a></div>
+      <h2 id="cta-title">${esc(u.ctaTitle)}</h2>
+      <div class="cta-actions">${primaryCta()}</div>
     </div></section>`;
   };
   const socials = cls => state.socials.filter(s => socialUrl(s)).length ? `<ul class="socials ${cls || ""}">${state.socials.filter(s => socialUrl(s)).map(s => {
@@ -210,12 +211,8 @@
     return `<li><a href="${esc(url)}" aria-label="${lbl}"${/^mailto:/i.test(url) ? "" : ' target="_blank" rel="noopener"'}>${ICONS[s.type] || ICONS.web}</a></li>`;
   }).join("")}</ul>` : "";
   const footer = () => {
-    const u = ui();
-    return `<footer class="site-footer"><div class="wrap footer-row">
-      <div class="footer-id"><strong>${esc(state.name)}</strong><span>${esc(t(state.role))}</span></div>
-      <nav aria-label="${esc(u.sections)}"><ul class="footer-nav">${[...ORDER, "contacto"].filter(on).map(k => `<li><a href="${PAGES[k]}">${esc(u.nav[k])}</a></li>`).join("")}</ul></nav>
-      ${socials()}
-    </div><div class="wrap footer-note">${esc(t(state.footer))}</div></footer>`;
+    const list = socials();
+    return list ? `<footer class="site-footer"><div class="wrap footer-row">${list}</div></footer>` : "";
   };
 
   /* ---------- vistas ---------- */
@@ -228,7 +225,6 @@
           ${wide ? shot(wide, { cls: "c-wide", eager: true }) : ""}
           ${tall.map((p, i) => shot(p, { cls: "c-tall c-tall-" + (i + 1), eager: true })).join("")}
         </div>` : "";
-      const live = state.projects.filter(p => safeUrl(p.demo));
       return `
 <section class="hero wrap">
   <div class="hero-copy">
@@ -239,18 +235,14 @@
   </div>
   ${collage}
 </section>
-${live.length ? `<section class="live-strip" aria-labelledby="live-title"><div class="wrap">
-  <h2 id="live-title" class="visually-hidden">${esc(u.workTitle)}</h2>
-  <ul class="live-list">${live.map(p => `<li><a href="${esc(safeUrl(p.demo))}" target="_blank" rel="noopener"><span class="dot" aria-hidden="true"></span><strong>${esc(t(p.title))}</strong><span class="live-host">${esc(host(safeUrl(p.demo)))}</span>${ICONS.out}</a></li>`).join("")}</ul>
-</div></section>` : ""}
 <section class="block wrap" aria-labelledby="svc-title">
   <h2 id="svc-title" class="block-title">${esc(u.servicesTitle)}</h2>
   <ul class="services">${u.services.map(s => `<li><h3>${esc(s.t)}</h3><p>${esc(s.d)}</p></li>`).join("")}</ul>
 </section>
 ${on("proyectos") && state.projects.length ? `<section class="block wrap" aria-labelledby="work-title">
   <div class="block-head"><h2 id="work-title" class="block-title">${esc(u.workTitle)}</h2><a class="text-link" href="${PAGES.proyectos}">${esc(u.allWork)}</a></div>
-  <ul class="work-grid">${state.projects.slice(0, 3).map(p => `<li class="work-card">
-    <a href="${PAGES.proyectos}#${slug(p)}"><div class="work-media">${shot(p)}</div><h3>${esc(t(p.title))}</h3><p>${esc(t(p.desc))}</p></a>
+  <ul class="work-list">${state.projects.map(p => `<li>
+    <a href="${PAGES.proyectos}#${slug(p)}"><h3>${esc(t(p.title))}</h3><p>${esc(t(p.desc))}</p>${ICONS.arrow}</a>
   </li>`).join("")}</ul>
 </section>` : ""}
 <section class="block wrap" aria-labelledby="proc-title">
@@ -262,10 +254,9 @@ ${on("proyectos") && state.projects.length ? `<section class="block wrap" aria-l
     sobre() {
       const u = ui(), hello = t(state.hello), about = tOnly(state.about), soft = state.skills.soft.items;
       const pic = src(state.photos.about) || src(state.photos.profile);
-      return `${pageHead(u.aboutTitle, u.aboutLead)}
+      return `${pageHead(u.aboutTitle)}
 <section class="wrap about">
   <div class="about-text">${hello ? paras(hello) : ""}${about ? paras(about) : ""}${!hello && !about ? `<p class="muted">${esc(u.empty)}</p>` : ""}
-    <p class="about-place">${ICONS.pin}<span>Estelí, Nicaragua</span></p>
   </div>
   ${pic ? `<figure class="about-photo"><img src="${esc(pic)}" alt="${esc(state.name)}" onerror="this.closest('figure').remove()"></figure>` : ""}
 </section>
@@ -284,7 +275,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
         return `<article class="case${i % 2 ? " flip" : ""}" id="${slug(p)}">
     <div class="case-media">${shot(p)}</div>
     <div class="case-body">
-      ${demo ? `<p class="case-live"><span class="dot" aria-hidden="true"></span><span>${esc(u.live)}</span><span class="case-host">${esc(host(demo))}</span></p>` : ""}
+      ${demo ? `<p class="case-live"><span class="dot" aria-hidden="true"></span><span>${esc(u.live)}</span></p>` : ""}
       <h2>${esc(t(p.title))}</h2>
       ${t(p.desc) ? `<p class="case-desc">${esc(t(p.desc))}</p>` : ""}
       ${stack.length ? `<h3 class="case-label">${esc(u.built)}</h3><ul class="tags">${stack.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
@@ -309,8 +300,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
       };
       return `${pageHead(u.skillsTitle, u.skillsLead)}
 <div class="wrap skills">${group("tech")}${group("tools")}</div>
-${S.soft.items.length ? `<section class="block wrap" aria-labelledby="soft-title"><h2 id="soft-title" class="block-title">${esc(t(S.soft.title))}</h2>
-  <ul class="tags tags-lg">${S.soft.items.map(s => `<li>${esc(t(s.n))}</li>`).join("")}</ul></section>` : ""}`;
+`;
     },
 
     experiencia() {
@@ -324,7 +314,6 @@ ${S.soft.items.length ? `<section class="block wrap" aria-labelledby="soft-title
 
     contacto() {
       const u = ui(), em = email(), cv = src(state.contact.cv), wa = waLink(), txt = t(state.contact.text);
-      const others = state.socials.filter(s => s.type !== "whatsapp" && s.type !== "email" && socialUrl(s));
       return `<section class="wrap contact">
   <div class="contact-main">
     <h1>${esc(u.contactTitle)}</h1>
@@ -335,10 +324,9 @@ ${S.soft.items.length ? `<section class="block wrap" aria-labelledby="soft-title
       <button class="btn btn-ghost btn-sm" type="button" data-copy>${ICONS.copy}<span>${esc(u.copy)}</span></button>
       <span class="visually-hidden" role="status" aria-live="polite" data-copy-status></span>
     </div>` : ""}
-    ${others.length || cv ? `<ul class="contact-more">${others.map(s => `<li><a href="${esc(socialUrl(s))}" target="_blank" rel="noopener">${ICONS[s.type] || ICONS.web}<span>${LABELS[s.type] || "Web"}</span></a></li>`).join("")}${cv ? `<li><a href="${esc(cv)}" download="${esc(state.contact.cvName || "CV.pdf")}">${ICONS.down}<span>${esc(u.cv)}</span></a></li>` : ""}</ul>` : ""}
+    ${cv ? `<ul class="contact-more"><li><a href="${esc(cv)}" download="${esc(state.contact.cvName || "CV.pdf")}">${ICONS.down}<span>${esc(u.cv)}</span></a></li></ul>` : ""}
   </div>
   <aside class="brief" aria-labelledby="brief-title">
-    <div class="brief-id">${src(state.photos.profile) ? `<img src="${esc(src(state.photos.profile))}" alt="" onerror="this.remove()">` : ""}<div><strong>${esc(state.name)}</strong><span>${esc(t(state.role))}</span></div></div>
     <h2 id="brief-title">${esc(u.brief)}</h2>
     <ol>${u.briefItems.map(x => `<li>${esc(x)}</li>`).join("")}</ol>
   </aside>
