@@ -7,7 +7,7 @@ window.SITE = {
     "en": "Portfolio"
   },
   "role": {
-    "es": "Desarrollador full stack",
+    "es": "Desarrollador Full Stack",
     "en": "Full-stack developer"
   },
   "hello": {
