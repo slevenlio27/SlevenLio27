@@ -64,7 +64,7 @@ window.SITE = {
         "en": "AI assistant for university teachers: each teacher connects their own Gemini account and conversations are logged. Includes an admin panel and runs live on Railway."
       },
       "stack": "FastAPI, React, Vite, Supabase, Gemini",
-      "image": "img/subidas/captura-desde-2026-10-22-00-03-19-1792649126157.jpg",
+      "image": "img/subidas/claustro-movil.jpg",
       "demo": "https://mi-agente-didactico-production.up.railway.app",
       "repo": ""
     },
