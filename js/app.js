@@ -174,7 +174,7 @@
 
   /* ---------- piezas compartidas ---------- */
   const header = () => {
-    const u = ui(), dark = document.documentElement.dataset.theme === "dark" || (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+    const u = ui(), dark = document.documentElement.dataset.theme !== "light";
     const tools = `<button class="icon-btn" type="button" data-lang aria-label="${esc(u.langSwitch)}"><span class="lang-code">${lang === "es" ? "EN" : "ES"}</span></button>
       <button class="icon-btn" type="button" data-theme-toggle aria-label="${esc(dark ? u.themeLight : u.themeDark)}">${dark ? ICONS.sun : ICONS.moon}</button>`;
     const links = ORDER.filter(on).map(k => `<li><a href="${PAGES[k]}"${k === page ? ' aria-current="page"' : ""}>${esc(u.nav[k])}</a></li>`).join("");
@@ -354,7 +354,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
     }));
     head.querySelectorAll("[data-theme-toggle]").forEach(b => b.addEventListener("click", () => {
       const root = document.documentElement;
-      const isDark = root.dataset.theme === "dark" || (!root.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
+      const isDark = root.dataset.theme !== "light";
       root.dataset.theme = isDark ? "light" : "dark";
       try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
       render();
@@ -383,7 +383,6 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
   }
   const onScroll = () => { const h = document.getElementById("header"); if (h) h.classList.toggle("scrolled", window.scrollY > 8); };
   window.addEventListener("scroll", onScroll, { passive: true });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (!document.documentElement.dataset.theme) render(); });
 
   /* Mide la proporción de las capturas para elegir marco de teléfono o de navegador. */
   const measure = () => Promise.all(state.projects.map(p => src(p.image)).filter(Boolean).map(url => new Promise(res => {
