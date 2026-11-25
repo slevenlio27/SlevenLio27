@@ -42,6 +42,14 @@ window.SITE = {
     {
       "type": "email",
       "url": "slevenlio27@gmail.com"
+    },
+    {
+      "type": "tiktok",
+      "url": "https://www.tiktok.com/@slevenlio27"
+    },
+    {
+      "type": "instagram",
+      "url": "https://www.instagram.com/slevenlio27/?hl=es-la"
     }
   ],
   "contact": {
