@@ -11,8 +11,8 @@ window.SITE = {
     "en": "Full-stack developer"
   },
   "hello": {
-    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nTrabajo con React y Vite en el frontend, FastAPI, PostgreSQL y Supabase en el backend, y Flutter para apps Android. Me ocupo de la autenticación de usuarios, los paneles de administración, el almacenamiento de archivos y la publicación en plataformas como Railway y GitHub Pages.",
-    "en": "I'm a full-stack developer who builds complete web and mobile apps: from the interface design to the database and the production launch.\nI work with React and Vite on the frontend, FastAPI, PostgreSQL and Supabase on the backend, and Flutter for Android apps. I handle user sign-in, admin panels, file storage and deployment on platforms like Railway and GitHub Pages."
+    "es": "Me dedico al desarrollo full stack, creando aplicaciones web y móviles completas: desde el diseño de la interfaz hasta la base de datos y el despliegue en producción.\nMe ocupo de todo lo que necesita una aplicación real: el inicio de sesión de los usuarios, el panel de administración, el almacenamiento de archivos y la publicación en internet.",
+    "en": "I'm a full-stack developer who builds complete web and mobile apps: from the interface design to the database and the production launch.\nI take care of everything a real app needs: user sign-in, the admin panel, file storage and putting it online."
   },
   "about": {
     "es": "Soy de Estelí y me apasiona la tecnología. Soy una persona carismática y entusiasta, con ganas de construir y de aportar a la comunidad que crea herramientas para hacer más fácil el día a día.",
