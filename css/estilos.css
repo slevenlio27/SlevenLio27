@@ -161,6 +161,12 @@ main { flex: 1; }
   .collage .device:hover.browser, .collage .device:hover .browser, .collage .device.phone:hover { box-shadow: 0 30px 70px -18px rgba(40, 200, 232, .45), 0 0 0 1px rgba(40, 200, 232, .55); }
   .collage:has(.device:hover) .device:not(:hover) { scale: .95; filter: brightness(.62) saturate(.8); }
 }
+@media (hover: none) {
+  .collage .device { transition: scale .45s cubic-bezier(.2, .8, .2, 1), translate .45s cubic-bezier(.2, .8, .2, 1), filter .35s ease; }
+  .collage .device.is-front { z-index: 6; scale: 1.14; translate: 0 -3%; }
+  .collage .device.is-front.phone, .collage .device.is-front.browser { box-shadow: 0 30px 70px -18px rgba(40, 200, 232, .45), 0 0 0 1px rgba(40, 200, 232, .55); }
+  .collage.has-front .device:not(.is-front) { scale: .95; filter: brightness(.62) saturate(.8); }
+}
 @keyframes settle-left { from { opacity: 0; transform: translateY(28px) rotate(-4deg); } to { opacity: 1; transform: rotate(-4deg); } }
 @keyframes settle-right { from { opacity: 0; transform: translateY(28px) rotate(4deg); } to { opacity: 1; transform: rotate(4deg); } }
 @keyframes settle { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }

@@ -395,6 +395,17 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
     document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach(l => l.remove());
     ["icon", "apple-touch-icon"].forEach(rel => { const l = document.createElement("link"); l.rel = rel; l.href = u; document.head.appendChild(l); });
   };
+  // En pantallas táctiles no hay "hover": un toque lleva la captura al primer plano, otro toque fuera la suelta.
+  document.addEventListener("click", e => {
+    if (!window.matchMedia("(hover: none)").matches) return;
+    const dev = e.target.closest(".collage .device"), col = dev && dev.closest(".collage");
+    document.querySelectorAll(".collage.has-front").forEach(c => { if (c !== col || (dev && dev.classList.contains("is-front"))) { c.classList.remove("has-front"); c.querySelectorAll(".is-front").forEach(d => d.classList.remove("is-front")); } });
+    if (dev && !dev.classList.contains("is-front") && col) {
+      col.classList.add("has-front");
+      col.querySelectorAll(".is-front").forEach(d => d.classList.remove("is-front"));
+      dev.classList.add("is-front");
+    }
+  });
   const preview = /[?&]preview=1/.test(location.search) && window.parent !== window;
   const boot = data => {
     state = normalize(data);
