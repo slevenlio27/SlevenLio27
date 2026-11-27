@@ -288,6 +288,7 @@
     if (tab === "fotos") {
       h += `<p class="group-title">Foto de perfil (Inicio)</p><p class="hint">Cuadrada, idealmente de 800 × 800 px o más.</p>` + upload("Subir foto", "photos.profile", "image/*");
       h += `<p class="group-title">Foto de Sobre mí</p><p class="hint">Vertical, proporción 3:4.</p>` + upload("Subir foto", "photos.about", "image/*");
+      h += `<p class="group-title">Ícono de la pestaña (favicon)</p><p class="hint">Se recorta cuadrado y se reduce a 256 × 256 px. Usa una imagen con el rostro o logo bien centrado.</p>` + upload("Subir ícono", "photos.favicon", "image/*");
       h += `<p class="hint">Las capturas de proyectos se cambian en la pestaña Proyectos.</p>`;
     }
     if (tab === "colores") {
@@ -344,14 +345,29 @@
     try {
       if (isPdf && file.size > 20 * 1024 * 1024) throw new Error("El PDF pesa más de 20 MB.");
       setStatus(isPdf ? "Preparando PDF…" : "Preparando imagen…");
-      const blob = isPdf ? file : await resize(file, 1600);
-      const repoPath = isPdf ? `archivos/${slug(file.name)}-${Date.now()}.pdf` : `img/subidas/${slug(file.name)}-${Date.now()}.jpg`;
+      const icon = path === "photos.favicon";
+      const blob = isPdf ? file : icon ? await squareIcon(file, 256) : await resize(file, 1600);
+      const repoPath = isPdf ? `archivos/${slug(file.name)}-${Date.now()}.pdf` : `img/subidas/${slug(file.name)}-${Date.now()}.${icon ? "png" : "jpg"}`;
       pending[repoPath] = { blob, dataUrl: await blobToDataUrl(blob) };
       const prev = get(path); if (prev && pending[prev]) delete pending[prev];
       set(path, repoPath);
       if (isPdf) state.contact.cvName = file.name;
       changed(); paint();
     } catch (err) { refresh(err.message || "No se pudo leer el archivo. Prueba con otro.", "err"); }
+  }
+  function squareIcon(file, size) {
+    return new Promise((resolve, reject) => {
+      const url = URL.createObjectURL(file), img = new Image();
+      img.onload = () => {
+        const side = Math.min(img.width, img.height), c = document.createElement("canvas");
+        c.width = c.height = size;
+        c.getContext("2d").drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, size, size);
+        URL.revokeObjectURL(url);
+        c.toBlob(b => b ? resolve(b) : reject(new Error("No se pudo procesar la imagen.")), "image/png");
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("Ese archivo no parece una imagen válida.")); };
+      img.src = url;
+    });
   }
   function resize(file, max) {
     return new Promise((resolve, reject) => {
