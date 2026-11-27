@@ -28,7 +28,7 @@ window.SITE = {
   },
   "photos": {
     "profile": "img/subidas/whatsapp-image-2026-10-21-at-11-47-27-pm-1792648119784.jpg",
-    "about": "img/subidas/perfil-emblema-4k-1795742458094.jpg"
+    "about": "img/subidas/img-20231209-wa0052-1795743104598.jpg"
   },
   "socials": [
     {
