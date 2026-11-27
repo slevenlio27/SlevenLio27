@@ -153,6 +153,14 @@ main { flex: 1; }
 .ready .collage .c-tall-2 { animation-delay: .24s; }
 .ready .collage.phones .c-left { animation-name: settle-left; animation-delay: .12s; }
 .ready .collage.phones .c-right { animation-name: settle-right; animation-delay: .24s; }
+/* al pasar el cursor, la captura sube al primer plano y las demás se atenúan.
+   Usa las propiedades individuales scale/translate para no chocar con la animación de entrada (transform). */
+@media (hover: hover) and (pointer: fine) {
+  .collage .device { transition: scale .45s cubic-bezier(.2, .8, .2, 1), translate .45s cubic-bezier(.2, .8, .2, 1), filter .35s ease; cursor: pointer; }
+  .collage .device:hover { z-index: 6; scale: 1.14; translate: 0 -3%; }
+  .collage .device:hover.browser, .collage .device:hover .browser, .collage .device.phone:hover { box-shadow: 0 30px 70px -18px rgba(40, 200, 232, .45), 0 0 0 1px rgba(40, 200, 232, .55); }
+  .collage:has(.device:hover) .device:not(:hover) { scale: .95; filter: brightness(.62) saturate(.8); }
+}
 @keyframes settle-left { from { opacity: 0; transform: translateY(28px) rotate(-4deg); } to { opacity: 1; transform: rotate(-4deg); } }
 @keyframes settle-right { from { opacity: 0; transform: translateY(28px) rotate(4deg); } to { opacity: 1; transform: rotate(4deg); } }
 @keyframes settle { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }

@@ -10,7 +10,7 @@
   const BASE = {
     name: "", brand: { es: "", en: "" }, role: { es: "", en: "" }, hello: { es: "", en: "" }, about: { es: "", en: "" },
     footer: { es: "", en: "" }, share: { es: "", en: "" },
-    photos: { profile: "", about: "" },
+    photos: { profile: "", about: "", favicon: "" },
     socials: [],
     contact: { email: "", cv: "", cvName: "", text: { es: "", en: "" } },
     projects: [], experience: [],
@@ -389,11 +389,17 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
   })));
 
   /* ---------- arranque ---------- */
+  // Ícono de la pestaña: si hay una foto subida, reemplaza el ícono por defecto.
+  const applyIcon = () => {
+    const u = src(state.photos && state.photos.favicon); if (!u) return;
+    document.querySelectorAll('link[rel="icon"], link[rel="apple-touch-icon"]').forEach(l => l.remove());
+    ["icon", "apple-touch-icon"].forEach(rel => { const l = document.createElement("link"); l.rel = rel; l.href = u; document.head.appendChild(l); });
+  };
   const preview = /[?&]preview=1/.test(location.search) && window.parent !== window;
   const boot = data => {
     state = normalize(data);
     measure().then(() => {
-      render();
+      render(); applyIcon();
       const h = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (h) h.scrollIntoView();
       document.documentElement.classList.add("ready");
@@ -406,7 +412,7 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
       if (e.data.lang && e.data.lang !== lang) lang = e.data.lang;
       const y = window.scrollY;
       state = normalize(e.data.state);
-      measure().then(() => { render(); window.scrollTo(0, y); document.documentElement.classList.add("ready"); });
+      measure().then(() => { render(); applyIcon(); window.scrollTo(0, y); document.documentElement.classList.add("ready"); });
     });
     window.parent.postMessage({ type: "portfolio-ready" }, "*");
   } else {

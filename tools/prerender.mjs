@@ -22,6 +22,7 @@ const PAGES = [
   { file: "contacto.html", url: "/contacto", title: "Contacto · Cotiza tu sitio web, sistema o app · Emilio Monzón",
     desc: "Cuéntame qué necesita tu negocio y lo construimos. Escríbeme por WhatsApp al +505 8603 6776 o por correo para cotizar tu sitio, sistema o app en Nicaragua." },
 ];
+const DEFAULT_ICON = `<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2328C8E8'/><text x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' text-anchor='middle' fill='%23070B16'>EM</text></svg>">`;
 const NAMES = { "/": "Inicio", "/sobre-mi": "Sobre mí", "/proyectos": "Proyectos", "/habilidades": "Habilidades", "/experiencia": "Experiencia", "/contacto": "Contacto" };
 
 const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".css": "text/css; charset=utf-8", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".webp": "image/webp", ".svg": "image/svg+xml", ".json": "application/json" };
@@ -88,6 +89,10 @@ for (const pg of PAGES) {
     .replace(/(<meta name="description" content=")[^"]*(")/, `$1${esc(pg.desc)}$2`)
     .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${esc(pg.title)}$2`)
     .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${esc(pg.desc)}$2`);
+  const fav = siteData.photos && siteData.photos.favicon;
+  const icon = fav && /^img\/subidas\/[\w.-]+$/.test(fav)
+    ? `<link rel="icon" href="/${fav}"><link rel="apple-touch-icon" href="/${fav}">` : DEFAULT_ICON;
+  html = html.replace(/<!--icon:start-->[\s\S]*?<!--icon:end-->/, () => `<!--icon:start-->${icon}<!--icon:end-->`);
   const ld = `<!--ld:start--><script type="application/ld+json">${JSON.stringify(graph(siteData, pg)).replace(/</g, "\\u003c")}</script><!--ld:end-->`;
   html = /<!--ld:start-->/.test(html) ? html.replace(/<!--ld:start-->[\s\S]*?<!--ld:end-->/, () => ld) : html.replace("</head>", () => ld + "\n</head>");
   const body = `<div id="root"><!--pre:start-->${inner}<!--pre:end--></div>`;
