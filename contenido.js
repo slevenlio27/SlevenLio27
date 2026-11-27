@@ -28,7 +28,7 @@ window.SITE = {
   },
   "photos": {
     "profile": "img/subidas/whatsapp-image-2026-10-21-at-11-47-27-pm-1792648119784.jpg",
-    "about": "img/subidas/whatsapp-image-2026-10-21-at-11-59-20-pm-1792648805656.jpg"
+    "about": "img/subidas/perfil-emblema-4k-1795742458094.jpg"
   },
   "socials": [
     {
@@ -54,8 +54,8 @@ window.SITE = {
   ],
   "contact": {
     "email": "slevenlio27@gmail.com",
-    "cv": "",
-    "cvName": "",
+    "cv": "archivos/cv-norman-peralta-1795742427002.pdf",
+    "cvName": "CV_Norman_Peralta.pdf",
     "text": {
       "es": "¿Tienes un proyecto que deseas realizar? Escríbeme y conversemos.",
       "en": "Have a project in mind? Write to me and let's talk."
@@ -108,7 +108,7 @@ window.SITE = {
   "skills": {
     "tech": {
       "title": {
-        "es": "Lenguajes y frameworks",
+        "es": "Lenguajes y Frameworks",
         "en": "Languages & frameworks"
       },
       "items": [
@@ -142,7 +142,7 @@ window.SITE = {
             "en": ""
           },
           "lvl": 2,
-          "years": "",
+          "years": "1",
           "note": {
             "es": "",
             "en": ""
@@ -263,12 +263,24 @@ window.SITE = {
             "es": "",
             "en": ""
           }
+        },
+        {
+          "n": {
+            "es": "Gemini",
+            "en": ""
+          },
+          "lvl": 3,
+          "years": "2",
+          "note": {
+            "es": "",
+            "en": ""
+          }
         }
       ]
     },
     "soft": {
       "title": {
-        "es": "Habilidades personales",
+        "es": "Habilidades Personales",
         "en": "Soft skills"
       },
       "items": [
@@ -331,6 +343,26 @@ window.SITE = {
             "es": "",
             "en": ""
           }
+        },
+        {
+          "n": {
+            "es": "Trabajo en Equipo",
+            "en": "New"
+          },
+          "note": {
+            "es": "",
+            "en": ""
+          }
+        },
+        {
+          "n": {
+            "es": "Responsabilidad",
+            "en": "New"
+          },
+          "note": {
+            "es": "",
+            "en": ""
+          }
         }
       ]
     }
@@ -342,7 +374,7 @@ window.SITE = {
         "en": "Jan 2024 – Nov 2026"
       },
       "role": {
-        "es": "Agente de lectura y reparto",
+        "es": "Agente de Lectura y Reparto",
         "en": "Meter reading and delivery agent"
       },
       "place": {
