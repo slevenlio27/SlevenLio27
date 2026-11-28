@@ -239,9 +239,10 @@
           + tf("Nombre", `projects.${i}.title`) + tf("Descripción", `projects.${i}.desc`, true)
           + pf("Tecnologías (separadas por coma)", `projects.${i}.stack`)
           + pf("Enlace a la demo", `projects.${i}.demo`, "url", "https://") + pf("Enlace al código", `projects.${i}.repo`, "url", "https://")
+          + tf("Botón extra: texto (opcional)", `projects.${i}.cta.label`, false, "Pedir demo por WhatsApp") + pf("Botón extra: enlace", `projects.${i}.cta.url`, "url", "https://wa.me/505…")
           + `<p class="lbl">Captura</p>` + upload("Subir captura", `projects.${i}.image`, "image/*")
           + `<p class="lbl">Capturas del celular (opcional)</p><p class="hint">Si el proyecto también tiene versión móvil, aparecen en teléfonos junto a la captura principal.</p>`
-          + upload("Subir captura", `projects.${i}.phone`, "image/*") + upload("Subir otra", `projects.${i}.phone2`, "image/*") + `</div>`;
+          + upload("Subir captura del celular", `projects.${i}.phone`, "image/*") + upload("Subir otra del celular", `projects.${i}.phone2`, "image/*") + `</div>`;
       });
       h += `<button class="btn small" type="button" data-add="projects">Agregar proyecto</button>`;
     }

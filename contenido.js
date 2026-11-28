@@ -75,6 +75,13 @@ window.SITE = {
       "image": "img/subidas/sge-pc-agenda.jpg",
       "phone": "img/subidas/sge-movil-cliente.jpg",
       "phone2": "img/subidas/sge-movil-admin.jpg",
+      "cta": {
+        "label": {
+          "es": "Pedir demo por WhatsApp",
+          "en": "Request a demo on WhatsApp"
+        },
+        "url": "https://wa.me/50586036776?text=Hola%20Emilio%2C%20quiero%20una%20demo%20de%20SGE%2C%20el%20sistema%20para%20salones%20de%20belleza."
+      },
       "demo": "",
       "repo": ""
     },
