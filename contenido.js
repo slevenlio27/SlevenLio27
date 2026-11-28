@@ -64,6 +64,29 @@ window.SITE = {
   "projects": [
     {
       "title": {
+        "es": "SGE · Sistema de Gestión Estética",
+        "en": "SGE · Beauty Salon Management System"
+      },
+      "desc": {
+        "es": "Sistema para salones de belleza que funciona en la PC del salón: agenda por profesional que avisa los choques de horario, citas que el admin aprueba o rechaza, clientes, servicios y precios, pagos por transferencia con recibo, productos y licencias por PC. Incluye app móvil: las clientas agendan y pagan el adelanto, el administrador aprueba desde el celular y cada profesional ve su agenda del día. Respaldos automáticos en la nube.",
+        "en": "Software for beauty salons that runs on the salon's own PC: a per-stylist schedule that flags time conflicts, bookings the owner approves or rejects, clients, services and prices, bank-transfer payments with receipts, products and per-PC licenses. It comes with a mobile app: clients book and pay the deposit, the owner approves from their phone and each stylist sees their day. Automatic cloud backups."
+      },
+      "stack": "Tauri, React, TypeScript, Rust, PostgreSQL, Capacitor, Supabase",
+      "image": "img/subidas/sge-pc-agenda.jpg",
+      "phone": "img/subidas/sge-movil-cliente.jpg",
+      "phone2": "img/subidas/sge-movil-admin.jpg",
+      "cta": {
+        "label": {
+          "es": "Pedir demo por WhatsApp",
+          "en": "Request a demo on WhatsApp"
+        },
+        "url": "https://wa.me/50586036776?text=Hola%20Emilio%2C%20quiero%20una%20demo%20de%20SGE%2C%20el%20sistema%20para%20salones%20de%20belleza."
+      },
+      "demo": "",
+      "repo": ""
+    },
+    {
+      "title": {
         "es": "Claustro",
         "en": "Claustro"
       },

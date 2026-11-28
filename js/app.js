@@ -172,6 +172,9 @@
       <div class="browser-screen"${img && ratios[img] ? ` style="--r:${Math.max(.42, Math.min(.75, ratios[img])).toFixed(3)}"` : ""}>${fallback}${media}</div></figure>`;
   };
 
+  // Capturas de la versión móvil que acompañan a la principal (opcionales, hasta dos).
+  const phones = p => [p.phone, p.phone2].map(src).filter(Boolean);
+
   /* ---------- piezas compartidas ---------- */
   const header = () => {
     const u = ui(), dark = document.documentElement.dataset.theme !== "light";
@@ -257,16 +260,16 @@ ${soft.length ? `<section class="block wrap" aria-labelledby="traits-title">
       const u = ui();
       return `${pageHead(u.projectsTitle, u.projectsLead)}
 <section class="wrap cases">${state.projects.length ? state.projects.map((p, i) => {
-        const demo = safeUrl(p.demo), repo = safeUrl(p.repo);
+        const demo = safeUrl(p.demo), repo = safeUrl(p.repo), cta = safeUrl(p.cta && p.cta.url);
         const stack = (p.stack || "").split(",").map(x => x.trim()).filter(Boolean);
         return `<article class="case${i % 2 ? " flip" : ""}" id="${slug(p)}">
-    <div class="case-media">${shot(p)}</div>
+    <div class="case-media">${phones(p).length ? `<div class="duo">${shot(p)}${phones(p).map((u, k) => `<figure class="device phone duo-phone duo-phone-${k + 1}"><div class="phone-screen"><img src="${esc(u)}" alt="${esc((lang === "es" ? "Versión móvil de " : "Mobile version of ") + t(p.title))}" loading="lazy" decoding="async" onerror="this.closest('figure').remove()"></div></figure>`).join("")}</div>` : shot(p)}</div>
     <div class="case-body">
       ${demo ? `<p class="case-live"><span class="dot" aria-hidden="true"></span><span>${esc(u.live)}</span></p>` : ""}
       <h2>${esc(t(p.title))}</h2>
       ${t(p.desc) ? `<p class="case-desc">${esc(t(p.desc))}</p>` : ""}
       ${stack.length ? `<h3 class="case-label">${esc(u.built)}</h3><ul class="tags">${stack.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
-      ${demo || repo ? `<div class="case-links">${demo ? `<a class="btn btn-primary" href="${esc(demo)}" target="_blank" rel="noopener">${esc(u.demo)}${ICONS.out}</a>` : ""}${repo ? `<a class="btn btn-ghost" href="${esc(repo)}" target="_blank" rel="noopener">${ICONS.github}${esc(u.repo)}</a>` : ""}</div>` : ""}
+      ${demo || repo || cta ? `<div class="case-links">${cta ? `<a class="btn btn-cta" href="${esc(cta)}" target="_blank" rel="noopener">${/wa\.me|whatsapp/i.test(cta) ? ICONS.whatsapp : ""}<span>${esc(t(p.cta.label) || u.demo)}</span></a>` : ""}${demo ? `<a class="btn btn-primary" href="${esc(demo)}" target="_blank" rel="noopener">${esc(u.demo)}${ICONS.out}</a>` : ""}${repo ? `<a class="btn btn-ghost" href="${esc(repo)}" target="_blank" rel="noopener">${ICONS.github}${esc(u.repo)}</a>` : ""}</div>` : ""}
     </div>
   </article>`;
       }).join("") : `<p class="muted">${esc(u.empty)}</p>`}</section>`;

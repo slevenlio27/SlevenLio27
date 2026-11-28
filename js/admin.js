@@ -239,7 +239,10 @@
           + tf("Nombre", `projects.${i}.title`) + tf("Descripción", `projects.${i}.desc`, true)
           + pf("Tecnologías (separadas por coma)", `projects.${i}.stack`)
           + pf("Enlace a la demo", `projects.${i}.demo`, "url", "https://") + pf("Enlace al código", `projects.${i}.repo`, "url", "https://")
-          + `<p class="lbl">Captura</p>` + upload("Subir captura", `projects.${i}.image`, "image/*") + `</div>`;
+          + tf("Botón extra: texto (opcional)", `projects.${i}.cta.label`, false, "Pedir demo por WhatsApp") + pf("Botón extra: enlace", `projects.${i}.cta.url`, "url", "https://wa.me/505…")
+          + `<p class="lbl">Captura</p>` + upload("Subir captura", `projects.${i}.image`, "image/*")
+          + `<p class="lbl">Capturas del celular (opcional)</p><p class="hint">Si el proyecto también tiene versión móvil, aparecen en teléfonos junto a la captura principal.</p>`
+          + upload("Subir captura del celular", `projects.${i}.phone`, "image/*") + upload("Subir otra del celular", `projects.${i}.phone2`, "image/*") + `</div>`;
       });
       h += `<button class="btn small" type="button" data-add="projects">Agregar proyecto</button>`;
     }
@@ -324,7 +327,7 @@
     if (el.dataset.file && el.files && el.files[0]) handleFile(el.dataset.file, el.files[0]);
   }
   const blank = {
-    projects: () => ({ title: L("Nuevo proyecto"), desc: L(), stack: "", image: "", demo: "", repo: "" }),
+    projects: () => ({ title: L("Nuevo proyecto"), desc: L(), stack: "", image: "", phone: "", phone2: "", demo: "", repo: "" }),
     experience: () => ({ period: L(), role: L("Nuevo rol"), place: L(), desc: L() }),
     "skills.tech.items": () => ({ n: L("Nueva"), lvl: 2, years: "", note: L() }),
     "skills.tools.items": () => ({ n: L("Nueva"), lvl: 2, years: "", note: L() }),
