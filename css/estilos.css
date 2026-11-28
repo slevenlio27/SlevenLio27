@@ -239,6 +239,11 @@ main + .site-footer { margin-top: clamp(64px, 9vw, 120px); }
 .case-media { background: var(--tint); border-radius: calc(var(--radius) + 6px); padding: clamp(20px, 4vw, 48px); display: grid; place-items: center; }
 .case-media .phone { width: min(260px, 62%); }
 .case-media .browser { width: 100%; }
+.case-media .duo { position: relative; width: 100%; padding: 0 6% 22% 0; }
+.case-media .duo .duo-phone { position: absolute; width: 26%; bottom: 0; padding: 5px; border-radius: 20px; }
+.case-media .duo .duo-phone .phone-screen { border-radius: 15px; }
+.case-media .duo .duo-phone-1 { right: 0; z-index: 2; }
+.case-media .duo .duo-phone-2 { right: 24%; bottom: 3%; }
 .case-live { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--live); font-size: .95rem; }
 .case-live > span { white-space: nowrap; }
 .case h2 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); letter-spacing: -.025em; margin-top: 14px; }

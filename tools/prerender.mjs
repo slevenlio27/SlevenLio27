@@ -14,7 +14,7 @@ const PAGES = [
   { file: "sobre-mi.html", url: "/sobre-mi", title: "Sobre mí · Emilio Monzón, desarrollador full stack en Estelí",
     desc: "Conoce a Emilio Monzón, desarrollador full stack de Estelí, Nicaragua: crea aplicaciones web y móviles completas, del diseño a la publicación." },
   { file: "proyectos.html", url: "/proyectos", title: "Proyectos · Sitios, sistemas y apps en línea · Emilio Monzón",
-    desc: "Proyectos reales en uso: Claustro (asistente de IA para docentes), Nutrisev (tienda y citas) y Facristh (venta de madera). Ábrelos y míralos funcionando." },
+    desc: "Proyectos reales: SGE (sistema para salones de belleza, PC y celular), Claustro (asistente de IA para docentes), Nutrisev (tienda y citas) y Facristh (venta de madera)." },
   { file: "habilidades.html", url: "/habilidades", title: "Habilidades y tecnologías · Emilio Monzón, desarrollador web",
     desc: "Tecnologías y herramientas con las que Emilio Monzón construye sitios web, sistemas con panel de administración y apps Android para negocios en Nicaragua." },
   { file: "experiencia.html", url: "/experiencia", title: "Experiencia · Emilio Monzón, desarrollador web y móvil",
